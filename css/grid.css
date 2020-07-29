@@ -6,15 +6,20 @@
     display: -ms-flexbox;
     display: flex;
 	-ms-flex-wrap: wrap;
-    flex-wrap: wrap;	
+    flex-wrap: wrap;
+    margin: 0 -15px;	
 }
 
-.grid-with-gap .view-content {
-	margin: 0 -15px;
-}
-
-.grid-with-gap .grid-item {
+.grid-item {
 	padding: 0 15px 30px 15px;
+}
+
+.grid.no-gap .view-content {
+	margin: 0;
+}
+
+.grid.no-gap .grid-item {
+	padding: 0;
 }
 
 /* Extra large */ 
@@ -146,14 +151,6 @@
 /* Extra small */
 
 @media (max-width: 575px) {	
-	
-.grid-with-gap .view-content {
-    margin: 0;
-}
-
-.grid-with-gap .grid-item {
-    padding: 0 0 30px 0;
-}
 	
 .grid-xs-5-cols .grid-item {
     -ms-flex: 0 0 20%;

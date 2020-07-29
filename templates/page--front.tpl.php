@@ -4,14 +4,7 @@
   <header id="header"><?php print render($page['header']) ?></header>
     
   <nav id="main-menu">
-      <?php 
-        if (module_exists('i18n_menu')) {
-         $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
-        } else {
-          $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-        }
-        print drupal_render($main_menu_tree);
-      ?>       
+    <?php print render($page['main_menu']) ?>      
   </nav>
 
   <div id="featured"><?php print render($page['featured']); ?></div>
@@ -27,7 +20,10 @@
     <?php print render($page['content']); ?>
   </main> 
   
-  <footer id="footer"><?php print render($page['footer']) ?></footer> 
+  <footer id="footer">
+      <?php print render($page['footer_first']) ?>
+      <?php print render($page['footer_second']) ?>
+  </footer> 
 
 </div>
 

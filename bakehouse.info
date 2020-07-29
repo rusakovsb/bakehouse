@@ -14,10 +14,12 @@ scripts[] = js/mobilepanel.js
 scripts[] = js/smoothscroll.js
 
 regions[header]        = Header
+regions[main_menu]     = Main Menu
 regions[featured]      = Featured
 regions[sidebar_first] = Sidebar
 regions[content]       = Content
-regions[footer]        = Footer
+regions[footer_first]  = Footer First
+regions[footer_second] = Footer Second
 regions[mobile_panel]  = Mobile Panel
 
 features[] = logo

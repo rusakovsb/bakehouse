@@ -60,7 +60,6 @@ body {
     height: 100%;
 }
 
-
 body {
     font-family: "MuseoSans";
     font-weight: 400;
@@ -100,15 +99,10 @@ em {
     font-style: italic;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    list-style-image: none;
-    list-style-type: none;
-}
-
+ul,
 ul li,
+ul li.expanded, 
+ul li.collapsed, 
 ul li.leaf {
     margin: 0;
     padding: 0;
@@ -138,7 +132,9 @@ a:hover {
 	padding: 0 15px;
 }
 
-body.sidebar-first #content-wrapper {
+body.sidebar-first #wrapper,
+.region-header,
+#footer .region {
 	display: -ms-flexbox;
     display: flex;
 }
@@ -160,11 +156,12 @@ body.sidebar-first #page-content {
 }
 
 .region-header,
-.region-footer {
-	display: -ms-flexbox;
-    display: flex;
+#footer .region {
 	-ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.region-header {
 	-ms-flex-align: center;
 	align-items: center;
 }
@@ -218,9 +215,10 @@ h6 {
 
 .block-title {
 	display: block;
-	font-size: 26px;
-    margin: 0 0 20px 0;
+	font-size: 22px;
+    margin: 0 0 15px 0;
     color: #63332a;
+    text-transform: uppercase;
 }
 
 /*-------------------------------------------*
@@ -301,7 +299,7 @@ h6 {
 }
 
 ul.menu li a.active {
-    color: rgba(99,51,42,0.8);
+    color: rgba(99,51,42,0.7);
 }
 
 /*-------------------------------------------*
@@ -343,7 +341,11 @@ ul.menu li a.active {
 
 .field-name-field-page-img {
     float: right;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 30px;
+}
+
+.field-name-field-additives-img {
+    margin: 0 0 30px 0;
 }
 
 .node ul {	
@@ -366,6 +368,17 @@ ul.menu li a.active {
     vertical-align: 0.1em;
 }
 
+.node img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.field-name-field-product-price {
+    color: #f57c20;
+    font-size: 19px;
+}
+
 /*-------------------------------------------*
 /* Forms
 /*-------------------------------------------*/
@@ -381,9 +394,9 @@ label {
     font-size: 1.2rem;  
 }
 
-input.form-text,
-textarea,
-select {
+.form-text,
+.form-textarea,
+.form-select {
     border: 1px solid #ddd1cf;
     font-family: "MuseoSans";
     font-weight: 400;
@@ -394,19 +407,19 @@ select {
     transition: 0.2s ease-out;
 }
 
-input.form-text:hover,
-textarea:hover,
-select:hover {
+.form-text:hover,
+.form-textarea:hover,
+.form-select:hover {
     border: 1px solid #ddd1cf;
 }
 
-input.form-text:focus,
-textarea:focus,
-select:focus {
+.form-text:focus,
+.form-textarea:focus,
+.form-select:focus {
     border: 1px solid #f57c20;
 }
 
-input.form-submit {
+.form-submit {
     color: #fff;
     background-color: #63332a;
     cursor: pointer;
@@ -422,12 +435,12 @@ input.form-submit {
     transition: 0.2s ease-out;
 }
 
-input.form-submit:hover,
-input.form-submit:focus {   
+.form-submit:hover,
+.form-submit:focus {   
     background-color: #f57c20;
 }
 
-input.form-submit,
+.form-submit,
 button {   
     cursor: pointer;
 }
@@ -463,9 +476,13 @@ a.button:active {
 
 #footer {
     font-size: 15px;
-    color: #63332a;
+    line-height: 1.5;
+    color: rgba(99, 51, 42, 0.8);
+    margin: 60px 0 0 0;
+}
+
+#footer .region {
     border-top: 1px solid #ddd1cf;
-    margin: 30px 0 0 0;
     padding: 30px 0;
 }
 
@@ -474,7 +491,12 @@ a.button:active {
 }
 
 #footer a {
-    color: #63332a;
+    color: rgba(99, 51, 42, 0.8);
 }
+
+#footer a:hover {
+    color: #f57c20;
+}
+
 
 

@@ -9,7 +9,6 @@ function bakehouse_html_head_alter(&$head_elements) {
   );
 }
 
-
 /**
  * Override or insert variables into the node template.
  */
