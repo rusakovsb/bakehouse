@@ -19,3 +19,12 @@ function bakehouse_preprocess_node(&$variables) {
   }
 }
 
+function bakehouse_menu_tree__main_menu($variables) {
+  return '<nav class="navigation"><ul class="menu">' . $variables['tree'] . '</ul></nav>';
+}
+
+
+function bakehouse_menu_tree__menu_production($variables) {
+  return '<nav class="navigation"><ul class="menu">' . $variables['tree'] . '</ul></nav>';
+}
+

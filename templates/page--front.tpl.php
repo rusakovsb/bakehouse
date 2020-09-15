@@ -3,9 +3,9 @@
 
   <header id="header"><?php print render($page['header']) ?></header>
     
-  <nav id="main-menu">
+  <div id="main-menu">
     <?php print render($page['main_menu']) ?>      
-  </nav>
+  </div>
 
   <div id="featured"><?php print render($page['featured']); ?></div>
   
