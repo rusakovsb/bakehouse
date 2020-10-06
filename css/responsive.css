@@ -4,7 +4,7 @@
 
 @media all and (max-width: 1399px) {
 
-#main-menu .menu a {
+#header .main-menu a {
     font-size: 15px;  
 	padding: 0 7px;  
 }
@@ -76,7 +76,7 @@ h1 {
 
 #block-block-2,
 #block-views-social-block,
-#main-menu {
+.region-main-menu {
     display: none;
 }
 

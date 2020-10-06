@@ -1,12 +1,11 @@
 
 <div id="container">
 
-  <header id="header"><?php print render($page['header']) ?></header>
+  <header id="header">
+    <?php print render($page['header']) ?>
+    <?php print render($page['main_menu']) ?>
+  </header>
     
-  <div id="main-menu">
-    <?php print render($page['main_menu']) ?>      
-  </div>
-
   <div id="featured"><?php print render($page['featured']); ?></div>
   
   <main id="main">
